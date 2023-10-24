@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "android-build-repro",
+    "slug": "android-build-repro",
+    "version": "1.0.0",
+    "scheme": "android-build-repro",
+    "platforms": ["ios", "android"],
+    "ios": {
+      "bundleIdentifier": "gg.fables.app"
+    },
+    "plugins": [
+      "expo-datadog",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "13.0"
+          },
+          "android": {
+            "compileSdkVersion": 33,
+            "targetSdkVersion": 33,
+            "minSdkVersion": 23,
+            "buildToolsVersion": "33.0.0",
+            "kotlinVersion": "1.6.20"
+          }
+        }
+      ]
+    ],
+    "android": {
+      "package": "gg.androidbuild.app"
+    }
+  }
+}
